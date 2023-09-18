@@ -1,8 +1,6 @@
 # TossACoinToYourHacker
 
 Project Goal:
-	
-hey 
 
 Ransomware "Toss A Coin To Your Hacker" (I will probably change its name later because its kinda cheesy)
 
