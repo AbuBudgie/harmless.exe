@@ -13,6 +13,10 @@ It will be made using python and will be tested in a Linux environment using a v
 
 DISCLAIMER: This is purely for the sake of analyzing how ransomware works and will not be used against anyone in a malicious or illegal manner.
 
+Requirements: 
+- malware should be able to manipulate more than one directory.
+- should be transportable i.e. USB, phishing email link, SMS message
+
 Project Schedule
 	
 
