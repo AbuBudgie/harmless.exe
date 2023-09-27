@@ -16,6 +16,7 @@ DISCLAIMER: This is purely for the sake of analyzing how ransomware works and wi
 Requirements: 
 - malware should be able to manipulate more than one directory.
 - should be transportable i.e. USB, phishing email link, SMS message
+- malware should be able to run with code not being accessible to the target. 
 
 Project Schedule
 	
