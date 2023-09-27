@@ -27,7 +27,7 @@ parser.add_argument("--dry-run", action="store_true", help="Perform a dry run (l
 args = parser.parse_args()
 
 # List of files to exclude from encryption/decryption
-exclude_files = ["encrypt.py", "thekey.key", "decrypt.py"]
+exclude_files = ["encrypt.py", "thekey.key", "decrypt.py", "dryrun.py" ,"README.md"]
 
 # Load the secret key
 with open("thekey.key", "rb") as key:
