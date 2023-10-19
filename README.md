@@ -15,6 +15,8 @@ DISCLAIMER: This is purely for the sake of analyzing how ransomware works and wi
 
 Requirements: 
 - malware should be able to manipulate more than one directory.
+- should not encrypt files that would render the pc unusable.
+- should present in a basic way how a true ransomware would behave. 
 
 Project Schedule
 	
