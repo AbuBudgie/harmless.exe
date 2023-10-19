@@ -7,7 +7,7 @@ Ransomware "Toss A Coin To Your Hacker" (I will probably change its name later b
 Project Description (more depth):
 	
 
-I plan to build a ransomware program that can be executed on any computer and once executed will proceed to encrypt every file on that computer. The only way to decrypt the files will be to supply a secret code that won’t be given until the victim fulfills a requirement.
+I plan to build a ransomware program that can be executed on any computer and once executed will proceed to encrypt multiple files on that computer. The only way to decrypt the files will be to supply a secret code that won’t be given until the victim fulfills a requirement.
 
 It will be made using python and will be tested in a Linux environment using a virtual machine to maintain the code of ethics in this course (also because I do not want to accidentally destroy my computer).
 
@@ -15,8 +15,6 @@ DISCLAIMER: This is purely for the sake of analyzing how ransomware works and wi
 
 Requirements: 
 - malware should be able to manipulate more than one directory.
-- should be transportable i.e. USB, phishing email link, SMS message
-- malware should be able to run with code not being accessible to the target. 
 
 Project Schedule
 	
@@ -83,7 +81,7 @@ Project Deliverables/Outcomes:
 
 The outcome should be a fully functional ransomware executable that can be used on any Linux environment computer.
 
-Once executed, the ransomware should encrypt all of the computer's important files and subsequently present a message to the user to fulfill a specific requirement. 
+Once executed, the ransomware should encrypt the computer's important files and subsequently present a message to the user to fulfill a specific requirement. 
 
 Upon fulfillment of said requirement and its detection, the user will be given a code to decrypt all of the information. 
 
