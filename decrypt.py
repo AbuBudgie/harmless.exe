@@ -21,9 +21,8 @@ directories = ["Desktop", "Documents", "Music", "Videos", "Pictures", "Downloads
 
 if user_phrase == secretphrase:
 # this loop will go through each file in the files list and DECRYPT each one with the key	
-	for root, dirs, files in os.walk('.'):
-		if any(dir in root for dir in directories):
-
+	for directory in directories:
+		for root, dirs, files in os.walk(directory):
 			for file in files:
 				# skipping files we dont want to decrypt
 				if file == 'encrypt.py' or file == 'decrypt.py' or file == 'thekey.key' or file == "dryrun.py" or file == "README.md":
