@@ -1,4 +1,3 @@
-
 import os 
 from cryptography.fernet import Fernet
 # This file does the opposite of ENCRYPTING
