@@ -83,7 +83,7 @@ Note: Final Report Deliverable Due Friday
 Project Deliverables/Outcomes:   
 	
 
-The outcome should be a fully functional ransomware executable that can be used on any Linux environment computer.
+The outcome should be a functional ransomware executable that can be used on a Linux environment computer.
 
 Once executed, the ransomware should encrypt the computer's important files and subsequently present a message to the user to fulfill a specific requirement. 
 
