@@ -7,7 +7,7 @@ Ransomware "harmless.exe"
 Project Description (more depth):
 	
 
-I plan to build a ransomware program that can be executed on any computer and once executed will proceed to encrypt multiple files on that computer. The only way to decrypt the files will be to supply a secret code that won’t be given until the victim fulfills a requirement.
+I plan to build a ransomware program that will encrypt multiple files on a computer. The only way to decrypt the files will be to supply a secret code that won’t be given until the victim fulfills a requirement.
 
 It will be made using python and will be tested in a Linux environment using a virtual machine to maintain the code of ethics in this course (also because I do not want to accidentally destroy my computer).
 
