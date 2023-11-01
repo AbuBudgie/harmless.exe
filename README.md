@@ -17,6 +17,8 @@ Requirements:
 - malware should be able to manipulate more than one directory.
 - should not encrypt files that would render the pc unusable.
 - should present in a basic way how a true ransomware would behave. 
+- source code should be inaccessible to victim
+- program should be transportable i.e. exe file that can be         downloaded online
 
 Project Schedule
 	
