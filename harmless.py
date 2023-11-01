@@ -48,7 +48,7 @@ messagebox.showinfo("Encryption Complete", "You have been hacked. Transfer one B
 # I deemed the process of bitcoin transferal not really important as the focus of this project 
 # is to analyse how ransomware encrypts/decrypts data on a computer. Bitcoin transferral can always be implemented later
 
-messagebox.showinfo("message", "Bitcoin received, secret code is 'coffee'. Now running decryption. Click ok to continue.")
+messagebox.showinfo("message", "Bitcoin received, secret code is 'pineapple'. Now running decryption. Click ok to continue.")
 
 # Read the secret key from the key file we created earlier
 with open("thekey.key", "rb") as key_file:
