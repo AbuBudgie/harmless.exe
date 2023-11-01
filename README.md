@@ -90,3 +90,5 @@ Once executed, the ransomware should encrypt the computer's important files and 
 Upon fulfillment of said requirement and its detection, the user will be given a code to decrypt all of the information. 
 
 If the user does not fulfill the requirement, the data will stay encrypted indefinitely. 
+
+These outcomes will be presented through a one minute video demo and 2 page report. 
